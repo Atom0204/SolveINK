@@ -1,0 +1,8 @@
+*.pth
+*.pt
+*.bin
+*.ckpt
+*.onnx
+EasyOCR/model/*.pth
+EasyOCR/model/*.pt
+EasyOCR/model/*.bin
