@@ -6,3 +6,6 @@
 EasyOCR/model/*.pth
 EasyOCR/model/*.pt
 EasyOCR/model/*.bin
+# Ignore virtual environment
+vv/
+
