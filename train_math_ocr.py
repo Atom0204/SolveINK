@@ -106,14 +106,14 @@ def train(model, train_loader, val_loader, num_epochs, device, save_path, conver
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--train_csv', default='C:/Users/kashy/Desktop/ML/math_ocr_dataset/train.csv')
-    parser.add_argument('--val_csv', default='C:/Users/kashy/Desktop/ML/math_ocr_dataset/val.csv')
-    parser.add_argument('--root_dir', default='C:/Users/kashy/Desktop/ML/math_ocr_dataset')
+    parser.add_argument('--train_csv', default='C:/Users/shiva/SolveINK/EasyOCR/math_ocr_dataset/train.csv')
+    parser.add_argument('--val_csv', default='C:/Users/shiva/SolveINK/EasyOCR/math_ocr_dataset/val.csv')
+    parser.add_argument('--root_dir', default='C:/Users/shiva/SolveINK/EasyOCR/math_ocr_dataset')
     parser.add_argument('--epochs', type=int, default=50)
     parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('--save_path', default='model')
     parser.add_argument('--checkpoint', default=None, help='Path to checkpoint to resume training')
-    parser.add_argument('--model_dir', default='C:/Users/kashy/Desktop/ML/EasyOCR/model', help='Directory for model storage')
+    parser.add_argument('--model_dir', default='C:/Users/shiva/SolveINK/EasyOCR/model', help='Directory for model storage')
     parser.add_argument('--label_column', default='transcription', help='Column name for labels in CSV')
     args = parser.parse_args()
 
