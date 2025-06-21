@@ -12,3 +12,6 @@ pyclipper
 ninja
 easyocr
 matplotlib
+
+
+

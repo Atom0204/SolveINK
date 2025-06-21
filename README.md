@@ -56,6 +56,34 @@ cd SolveINK
 3. Install Requirements
 pip install -r requirements.txt
 
+⚡ Enabling CUDA (GPU Acceleration)
+This project supports GPU acceleration using CUDA-enabled PyTorch builds. By default, the scripts will automatically detect and use the GPU if available.
+
+✅ Requirements
+NVIDIA GPU
+
+Installed CUDA Toolkit ≥ 12.1 (matching PyTorch build)
+
+Compatible PyTorch + torchvision with CUDA support
+
+🔧 Installing PyTorch with CUDA Support
+Use the correct install command depending on your Python version:
+
+✅ For Python 3.10 or 3.11:
+pip install torch==2.5.1 torchvision==0.16.1 --index-url https://download.pytorch.org/whl/cu121
+🛑 Python 3.13 is not supported by PyTorch yet. Use Python 3.10 or 3.11 instead.
+
+💡 Notes
+If CUDA is not available, the code will automatically fall back to CPU.
+
+Training on GPU is significantly faster — use it if available!
+
+Ensure you're not using a CPU-only PyTorch build (pip list should show +cu121 in torch version).
+# Current torch version is CPU-only.
+# To use GPU acceleration, uninstall this and install the CUDA version:
+# pip install torch==2.5.1 torchvision==0.16.1 --index-url https://download.pytorch.org/whl/cu121
+
+
 
 4. Run training:
 python train_math_ocr.py
@@ -64,8 +92,6 @@ Model checkpoints will be saved in:- SolveINK/model/
 🔍 Testing on an Image
 python main.py
 Edit main.py to change the test image path (IMG_7933.jpg) before running.
-
-
 
 
 ✅ Optional 
